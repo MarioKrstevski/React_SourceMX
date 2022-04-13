@@ -31,10 +31,11 @@ function GrandChild(props) {
     </div>
   );
 }
+let styles = { border: "1px solid red" };
 
 function Child(props) {
   return (
-    <div style={{ border: "1px solid red" }}>
+    <div style={styles}>
       <h1>This is the child</h1>
       <GrandChild
         setUser={props.setUser}
@@ -49,7 +50,8 @@ function Parent() {
   const [user, setUser] = useState({ name: "John", surname: "Doe" });
 
   function updateSurname() {
-    setUser({ ...user, surname: "ASDFGHHGHJKL" });
+    let newState = { ...user, surname: "ASDFGHHGHJKL" };
+    setUser(newState);
   }
 
   return (

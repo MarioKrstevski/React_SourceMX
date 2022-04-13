@@ -4,7 +4,7 @@ import ArrayNumbers from "./components/ArrayNumbers";
 import ArrayNames from "./components/ArrayNames";
 import ArrayObjects from "./components/ArrayObjects";
 import Counter from "./components/Counter";
-import "./App.css";
+import "./styles/App.css";
 import ArraysWithKeys from "./components/ArraysWithKeys";
 import Incrementor from "./components/Incrementor";
 import ImePrezime from "./components/ImePrezime";
@@ -15,6 +15,10 @@ import Switch from "./morecomponents/Switch";
 import LoadingData from "./morecomponents/LoadingData";
 import ParentChild from "./evenmorecomponents/ParentChild";
 import Ref from "./evenmorecomponents/Ref";
+import Effect from "./evenmorecomponents/Effect";
+import CreditCardExample from "./evenmorecomponents/CreditCardExample";
+import Axios from "./evenmorecomponents/Axios";
+import UILibrary from "./evenmorecomponents/UILibrary";
 
 // React.createElement() === JSX
 // Rules:
@@ -28,7 +32,7 @@ import Ref from "./evenmorecomponents/Ref";
 
 function App() {
   return (
-    <div className="App-header">
+    <div className="App-header" >
       {/* <MultipleNumbers />
       <ArrayNumbers />
       <ArrayNames />
@@ -48,6 +52,12 @@ function App() {
       {/* <ParentChild /> */}
 
       <Ref></Ref>
+      {/* <Effect /> */}
+
+      {/* <CreditCardExample /> */}
+      {/* <Axios /> */}
+
+      {/* <UILibrary /> */}
 
       {/* <LoadingData></LoadingData> */}
     </div>

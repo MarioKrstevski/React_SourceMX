@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import style from "./Tweet.module.css";
 
 function Tweet() {
+  console.log(style);
+
   const [tweetText, setTweetText] = useState("");
 
   function handleChange(e) {
@@ -14,7 +17,7 @@ function Tweet() {
   let shouldBeDisabled = tweetText.length <= 0 || tweetText.length >= 151;
 
   return (
-    <div>
+    <div className={style.tweet} style={{ color: "white" }}>
       Tweet
       <br />
       <input type="text" value={tweetText} onChange={handleChange} />
