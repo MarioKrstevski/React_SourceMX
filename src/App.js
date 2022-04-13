@@ -14,6 +14,7 @@ import Tweet from "./morecomponents/Tweet";
 import Switch from "./morecomponents/Switch";
 import LoadingData from "./morecomponents/LoadingData";
 import ParentChild from "./evenmorecomponents/ParentChild";
+import Ref from "./evenmorecomponents/Ref";
 
 // React.createElement() === JSX
 // Rules:
@@ -44,7 +45,9 @@ function App() {
       {/* <Tweet /> */}
       {/* <Switch></Switch> */}
 
-      <ParentChild />
+      {/* <ParentChild /> */}
+
+      <Ref></Ref>
 
       {/* <LoadingData></LoadingData> */}
     </div>
