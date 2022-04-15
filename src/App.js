@@ -23,6 +23,17 @@ import { useState } from "react";
 import Context from "./themostcomponents/Context";
 import { ThemeContext } from "./contexts/themeContext";
 import CustomHooks from "./themostcomponents/CustomHooks";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { useFetchPokemon } from "./hooks/useFetchPokemon";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+  useNavigate,
+} from "react-router-dom";
 
 // React.createElement() === JSX
 // Rules:
@@ -37,12 +48,94 @@ import CustomHooks from "./themostcomponents/CustomHooks";
 // function App() {
 //   return (
 //     <>
-    
+
 //     </>
 //   );
 // }
 
+function Home() {
+  return <div style={{ border: "1px solid red" }}>home</div>;
+}
+function Aboutus() {
+  return <div style={{ border: "1px solid red" }}>aboutus</div>;
+}
+
+function Contact() {
+  return <div style={{ border: "1px solid red" }}>contact</div>;
+}
+
+function Pokemons() {
+  let params = useParams();
+  const { pokemon } = useFetchPokemon();
+  let navigate = useNavigate();
+
+  return (
+    <div style={{ border: "1px solid red" }}>
+      <h1>Pokemons</h1>
+      <ul>
+        {pokemon.slice(0, 5).map((p) => (
+          <li key={p.name}> {p.name}</li>
+        ))}
+      </ul>
+
+      <button
+        onClick={() => {
+          navigate("/about");
+        }}
+      >
+        go to home
+      </button>
+    </div>
+  );
+}
+
 function App() {
+  return (
+    <BrowserRouter>
+      <div>
+        <div className="menu">
+          <Navbar bg="light" expand="lg">
+            <Container>
+              <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                  <Nav.Link>
+                    <Link to="/">Home</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="about">Aboutus</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="contact">Contact</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="pokemons">Pokemons</Link>
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </div>
+
+        <div style={{ backgroundColor: "pink", height: "80vh" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<Aboutus />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="pokemons" element={<Pokemons />}>
+              <Route path=":pokemonId" element={<Pokemons />} />
+            </Route>
+            <Route path="*" element={<div> 404 </div>} />
+           
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+function Apps() {
   // const [theme, setTheme] = useState('light')
 
   return (
