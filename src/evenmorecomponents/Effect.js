@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 function Effect() {
@@ -7,7 +6,8 @@ function Effect() {
   const [name, setName] = useState("Mario");
   // side-effects
 
-  //   updateNameWhenCounterIs5
+  // updateNameWhenCounterIs5
+  setTimeout(()=>{}, 1000)
   useEffect(
     function () {
       if (counter === 5) {

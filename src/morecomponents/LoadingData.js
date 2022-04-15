@@ -7,7 +7,6 @@ function LoadingData() {
     setIsLoading(!isLoading);
   }
 
-
   return (
     <div>
       {/* Loading Data */}

@@ -19,6 +19,10 @@ import Effect from "./evenmorecomponents/Effect";
 import CreditCardExample from "./evenmorecomponents/CreditCardExample";
 import Axios from "./evenmorecomponents/Axios";
 import UILibrary from "./evenmorecomponents/UILibrary";
+import { useState } from "react";
+import Context from "./themostcomponents/Context";
+import { ThemeContext } from "./contexts/themeContext";
+import CustomHooks from "./themostcomponents/CustomHooks";
 
 // React.createElement() === JSX
 // Rules:
@@ -30,9 +34,19 @@ import UILibrary from "./evenmorecomponents/UILibrary";
 // Inside props we can find every properties that we passed as key value pairs
 // if we are using arrays we must have a key prop
 
+// function App() {
+//   return (
+//     <>
+    
+//     </>
+//   );
+// }
+
 function App() {
+  // const [theme, setTheme] = useState('light')
+
   return (
-    <div className="App-header" >
+    <div className="App-header">
       {/* <MultipleNumbers />
       <ArrayNumbers />
       <ArrayNames />
@@ -51,7 +65,7 @@ function App() {
 
       {/* <ParentChild /> */}
 
-      <Ref></Ref>
+      {/* <Ref></Ref> */}
       {/* <Effect /> */}
 
       {/* <CreditCardExample /> */}
@@ -60,6 +74,12 @@ function App() {
       {/* <UILibrary /> */}
 
       {/* <LoadingData></LoadingData> */}
+
+      {/* <ThemeContext.Provider value={'light'}>
+        <Context />
+      </ThemeContext.Provider> */}
+
+      <CustomHooks />
     </div>
   );
 }

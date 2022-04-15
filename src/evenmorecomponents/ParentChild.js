@@ -6,6 +6,7 @@ import React, { useState } from "react";
 
 function GrandChild(props) {
   const { name, surname } = props.user;
+
   return (
     <div style={{ border: "1px solid yellow" }}>
       <h2>This the grandchild</h2>
