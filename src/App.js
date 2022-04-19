@@ -192,11 +192,10 @@ function App() {
       <Button variant="secondary" size="lg" text="Button4" />
       <Button size="lg" />
       <Button variant="secondary" size="lg" text="Button5" rounded />
-      <Button size="sm" rounded/>
-      <Button icon rounded/>
-      <Button icon iconPosition="right" rounded/>
-
-
+      <Button size="sm" rounded />
+      <Button icon rounded />
+      <Button icon iconPosition="right" rounded />
+      <Button icon iconPosition="right" disabled rounded />
     </div>
   );
 }

@@ -52,7 +52,6 @@ function Button(props) {
     <button style={buttonStyle} disabled={props.disabled}>
       {props.icon && props.iconPosition === "left" && icon}
       {props.text}
-
       {props.icon && props.iconPosition === "right" && icon}
     </button>
   );
