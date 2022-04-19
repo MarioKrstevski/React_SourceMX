@@ -1,8 +1,9 @@
 import React from "react";
 
-const icon = <i style={{ margin: 4 }} class="fa fa-home"></i>;
-
 function Button(props) {
+  const icon = (
+    <i style={{ margin: 4 }} className={`fa fa-${props.defaultIcon}`}></i>
+  );
   function getBgColor(variant) {
     if (variant === "primary") {
       return "#3d3dff";
@@ -65,6 +66,7 @@ Button.defaultProps = {
   icon: false,
   iconPosition: "left",
   disabled: false,
+  defaultIcon: "home",
 };
 
 export default Button;

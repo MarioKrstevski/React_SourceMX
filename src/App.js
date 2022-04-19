@@ -196,6 +196,8 @@ function App() {
       <Button icon rounded />
       <Button icon iconPosition="right" rounded />
       <Button icon iconPosition="right" disabled rounded />
+      <Button icon iconPosition="right" disabled rounded defaultIcon="trash" />
+      <Button size="md" text="" icon defaultIcon="close" />
     </div>
   );
 }
