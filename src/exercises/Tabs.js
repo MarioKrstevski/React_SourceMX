@@ -4,7 +4,15 @@ import { useState } from "react";
 export default function Tab() {
   const [activeTab, setActiveTab] = useState(1);
 
- 
+  //   let mapping = {
+  //     1: <div class="tab-pane">Contents for tab 1</div>,
+  //     2: <div class="tab-pane">Contents for tab 2</div>,
+  //     3: <div class="tab-pane">Contents for tab 3</div>,
+  //   };
+
+  //   function renderCorrespondingTabContent(aT) {
+  //     return mapping[aT];
+  //   }
 
   return (
     <div className="tab-component">
@@ -20,6 +28,8 @@ export default function Tab() {
         {activeTab === 2 && <div class="tab-pane">Contents for tab 2</div>}
         {activeTab === 3 && <div class="tab-pane">Contents for tab 3</div>}
       </div>
+
+      {/* <div id="tabs-content">{renderCorrespondingTabContent(activeTab)}</div> */}
 
       {/* <div id="tabs-content">
         <div class={`tab-pane ${activeTab === 1 ? "active" : "hidden"}`}>
