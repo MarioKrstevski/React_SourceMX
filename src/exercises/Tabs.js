@@ -1,8 +1,17 @@
 import React from "react";
 import { useState } from "react";
 
+let mapping = {
+  mario: "Contents for mario",
+  stefan: "Contents for stefan",
+  tamara: "Contents for tamara",
+};
+
+const tabsArray = ["Mario", "Stefan", "Tamara"];
+const tabContentsArray = ["CF Mario", "CF Stefan", "CF Tamara"];
+
 export default function Tab() {
-  const [activeTab, setActiveTab] = useState("m");
+  const [activeTab, setActiveTab] = useState("mario");
 
   //   let mapping = {
   //     1: <div class="tab-pane">Contents for tab 1</div>,
@@ -18,15 +27,26 @@ export default function Tab() {
     <div className="tab-component">
       <div id="tabs-items">
         <ul>
-          <li onClick={() => setActiveTab("m")}>Mario</li>
-          <li onClick={() => setActiveTab("s")}>Stefan</li>
-          <li onClick={() => setActiveTab("t")}>Tamara</li>
+          {[
+            Object.keys(mapping).map((name) => (
+              <li onClick={() => setActiveTab(name.toLocaleLowerCase())}>
+                {name}
+              </li>
+            )),
+          ]}
         </ul>
       </div>
       <div id="tabs-content">
-        {activeTab === "m" && <div class="tab-pane">Contents for Mario </div>}
-        {activeTab === "s" && <div class="tab-pane">Contents for Stefan</div>}
-        {activeTab === "t" && <div class="tab-pane">Contents for Tamara</div>}
+        <div className="tab-pane">{mapping[activeTab]}</div>
+        {/* {activeTab === "mario" && (
+          <div class="tab-pane">Contents for Mario </div>
+        )}
+        {activeTab === "stefan" && (
+          <div class="tab-pane">Contents for Stefan</div>
+        )}
+        {activeTab === "tamara" && (
+          <div class="tab-pane">Contents for Tamara</div>
+        )} */}
       </div>
 
       {/* <div id="tabs-content">{renderCorrespondingTabContent(activeTab)}</div> */}
