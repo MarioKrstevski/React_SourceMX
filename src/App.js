@@ -23,6 +23,7 @@ import { useState } from "react";
 import Context from "./themostcomponents/Context";
 import { ThemeContext } from "./contexts/themeContext";
 import CustomHooks from "./themostcomponents/CustomHooks";
+import Tabs from "./exercises/Tabs";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useFetchPokemon } from "./hooks/useFetchPokemon";
 
@@ -89,7 +90,7 @@ function Pokemons() {
   );
 }
 
-function App() {
+function Apps() {
   return (
     <BrowserRouter>
       <div>
@@ -134,7 +135,7 @@ function App() {
   );
 }
 
-function Apps() {
+function App() {
   // const [theme, setTheme] = useState('light')
 
   return (
@@ -171,7 +172,9 @@ function Apps() {
         <Context />
       </ThemeContext.Provider> */}
 
-      <CustomHooks />
+      {/* <CustomHooks /> */}
+
+      <Tabs />
     </div>
   );
 }
