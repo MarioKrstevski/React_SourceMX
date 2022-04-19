@@ -1,13 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Tab(props) {
+function Tab(props) {
   //   let startingFrom =
   //     props.startingTab > tabsArray.length ? tabsArray.length : props.startingTab;
   const [activeTab, setActiveTab] = useState(props.startingTab);
 
   return (
     <div className="tab-component">
+      <h1>{props.greeting}</h1>
       <div id="tabs-items">
         <ul>
           {props.tabsArray.map((name, index) => (
@@ -21,3 +22,9 @@ export default function Tab(props) {
     </div>
   );
 }
+
+Tab.defaultProps = {
+  greeting: "Hello World",
+};
+
+export default Tab;

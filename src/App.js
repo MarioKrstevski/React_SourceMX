@@ -179,13 +179,10 @@ function App() {
       {/* <CustomHooks /> */}
 
       <Tabs
+      // greeting="Hello"
         startingTab={1}
         tabsArray={["Mario", "Stefan", "Tamara"]}
-        tabContentsArray={[
-          <div> Ova ke se pokaze prvo </div>,
-          "CF Stefan",
-          "CF Tamara",
-        ]}
+        tabContentsArray={["CD Mario", "CF Stefan", "CF Tamara"]}
       />
     </div>
   );
