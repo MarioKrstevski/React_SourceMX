@@ -62,7 +62,11 @@ function Aboutus() {
 }
 
 function Contact() {
-  return <div onc style={{ border: "1px solid red" }}>contact</div>;
+  return (
+    <div onc style={{ border: "1px solid red" }}>
+      contact
+    </div>
+  );
 }
 
 function Pokemons() {
@@ -174,7 +178,15 @@ function App() {
 
       {/* <CustomHooks /> */}
 
-      <Tabs />
+      <Tabs
+        startingTab={1}
+        tabsArray={["Mario", "Stefan", "Tamara"]}
+        tabContentsArray={[
+          <div> Ova ke se pokaze prvo </div>,
+          "CF Stefan",
+          "CF Tamara",
+        ]}
+      />
     </div>
   );
 }
