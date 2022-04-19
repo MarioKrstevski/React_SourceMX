@@ -23,6 +23,7 @@ function Tab(props) {
   );
 }
 
+
 Tab.defaultProps = {
   greeting: "Hello World",
 };

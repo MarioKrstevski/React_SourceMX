@@ -24,6 +24,7 @@ import Context from "./themostcomponents/Context";
 import { ThemeContext } from "./contexts/themeContext";
 import CustomHooks from "./themostcomponents/CustomHooks";
 import Tabs from "./exercises/Tabs";
+import Button from "./exercises/Button";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useFetchPokemon } from "./hooks/useFetchPokemon";
 
@@ -179,11 +180,23 @@ function App() {
       {/* <CustomHooks /> */}
 
       <Tabs
-      // greeting="Hello"
+        // greeting="Hello"
         startingTab={1}
         tabsArray={["Mario", "Stefan", "Tamara"]}
         tabContentsArray={["CD Mario", "CF Stefan", "CF Tamara"]}
       />
+      {/* <i class="fa fa-home"></i> */}
+      <Button variant="primary" text="Button1" />
+      <Button variant="secondary" text="Button2" />
+      <Button variant="secondary" size="md" text="Button3" />
+      <Button variant="secondary" size="lg" text="Button4" />
+      <Button size="lg" />
+      <Button variant="secondary" size="lg" text="Button5" rounded />
+      <Button size="sm" rounded/>
+      <Button icon rounded/>
+      <Button icon iconPosition="right" rounded/>
+
+
     </div>
   );
 }
