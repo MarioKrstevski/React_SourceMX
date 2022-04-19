@@ -61,7 +61,7 @@ function Aboutus() {
 }
 
 function Contact() {
-  return <div style={{ border: "1px solid red" }}>contact</div>;
+  return <div onc style={{ border: "1px solid red" }}>contact</div>;
 }
 
 function Pokemons() {
@@ -127,7 +127,6 @@ function App() {
               <Route path=":pokemonId" element={<Pokemons />} />
             </Route>
             <Route path="*" element={<div> 404 </div>} />
-           
           </Routes>
         </div>
       </div>
