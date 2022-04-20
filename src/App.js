@@ -36,6 +36,8 @@ import {
   useParams,
   useNavigate,
 } from "react-router-dom";
+import Movies from "./exercises/Movies";
+import MoviesClassesAPI from "./exercises/MoviesClassesAPI";
 
 // React.createElement() === JSX
 // Rules:
@@ -141,6 +143,7 @@ function Apps() {
 }
 
 function App() {
+
   // const [theme, setTheme] = useState('light')
 
   return (
@@ -179,14 +182,14 @@ function App() {
 
       {/* <CustomHooks /> */}
 
-      <Tabs
+      {/* <Tabs
         // greeting="Hello"
         startingTab={1}
         tabsArray={["Mario", "Stefan", "Tamara"]}
         tabContentsArray={["CD Mario", "CF Stefan", "CF Tamara"]}
-      />
+      /> */}
       {/* <i class="fa fa-home"></i> */}
-      <Button variant="primary" text="Button1" />
+      {/* <Button variant="primary" text="Button1" />
       <Button variant="secondary" text="Button2" />
       <Button variant="secondary" size="md" text="Button3" />
       <Button variant="secondary" size="lg" text="Button4" />
@@ -197,7 +200,14 @@ function App() {
       <Button icon iconPosition="right" rounded />
       <Button icon iconPosition="right" disabled rounded />
       <Button icon iconPosition="right" disabled rounded defaultIcon="trash" />
-      <Button size="md" text="" icon defaultIcon="close" />
+      <Button size="md" text="" icon defaultIcon="close" /> */}
+
+
+
+      {/* <Movies /> */}
+      <MoviesClassesAPI />
+
+
     </div>
   );
 }
